@@ -15,6 +15,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configure()
+        goToNextScreen()
     }
 
     func configure() {
@@ -28,6 +29,13 @@ class SplashVC: UIViewController {
             logoImageView.heightAnchor.constraint(equalToConstant: 400),
             logoImageView.widthAnchor.constraint(equalToConstant: 300)
         ])
+    }
+    
+    func goToNextScreen() {
+        let nextScreen = ListVC()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.navigationController?.pushViewController(nextScreen, animated: true)
+        }
     }
 }
 
