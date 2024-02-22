@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		865DA53A2B878B06004FEA7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA5392B878B06004FEA7C /* AppDelegate.swift */; };
 		865DA53C2B878B06004FEA7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA53B2B878B06004FEA7C /* SceneDelegate.swift */; };
-		865DA53E2B878B06004FEA7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA53D2B878B06004FEA7C /* ViewController.swift */; };
+		865DA53E2B878B06004FEA7C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA53D2B878B06004FEA7C /* SplashVC.swift */; };
 		865DA5432B878B07004FEA7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865DA5422B878B07004FEA7C /* Assets.xcassets */; };
 		865DA5462B878B07004FEA7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865DA5442B878B07004FEA7C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		865DA5362B878B06004FEA7C /* WomenInScience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WomenInScience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865DA5392B878B06004FEA7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		865DA53B2B878B06004FEA7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		865DA53D2B878B06004FEA7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		865DA53D2B878B06004FEA7C /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		865DA5422B878B07004FEA7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865DA5452B878B07004FEA7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		865DA5472B878B07004FEA7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			children = (
 				865DA5392B878B06004FEA7C /* AppDelegate.swift */,
 				865DA53B2B878B06004FEA7C /* SceneDelegate.swift */,
-				865DA53D2B878B06004FEA7C /* ViewController.swift */,
+				865DA53D2B878B06004FEA7C /* SplashVC.swift */,
 				865DA5422B878B07004FEA7C /* Assets.xcassets */,
 				865DA5442B878B07004FEA7C /* LaunchScreen.storyboard */,
 				865DA5472B878B07004FEA7C /* Info.plist */,
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865DA53E2B878B06004FEA7C /* ViewController.swift in Sources */,
+				865DA53E2B878B06004FEA7C /* SplashVC.swift in Sources */,
 				865DA53A2B878B06004FEA7C /* AppDelegate.swift in Sources */,
 				865DA53C2B878B06004FEA7C /* SceneDelegate.swift in Sources */,
 			);
@@ -287,9 +287,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deryacayiroglu.WomenInScience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,9 +315,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deryacayiroglu.WomenInScience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
