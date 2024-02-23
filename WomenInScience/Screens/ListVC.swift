@@ -13,6 +13,15 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemPink
         navigationController?.isNavigationBarHidden = true
+        
+        NetworkManager.shared.getWomenInScience { (womenInScience, errorMessage) in
+            guard let womenInScience = womenInScience else {
+                print("Bad Stuff Happend")
+                return
+            }
+            
+            print(womenInScience)
+        }
     }
 
 }

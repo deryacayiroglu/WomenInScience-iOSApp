@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Women: Codable {
+class Woman: Codable {
     var Adi: String
     var Alani: String
     var DogumTarihi: String
