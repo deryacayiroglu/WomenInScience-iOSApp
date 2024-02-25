@@ -60,16 +60,24 @@
 		865DA5382B878B06004FEA7C /* WomenInScience */ = {
 			isa = PBXGroup;
 			children = (
+				867EA7C92B8B869B009BC530 /* Support */,
 				86CD0CA72B89380000FE83F3 /* Managers */,
 				86AB670A2B88EB05007FC763 /* Model */,
 				86AB67092B88EAE8007FC763 /* Screens */,
+				865DA5472B878B07004FEA7C /* Info.plist */,
+			);
+			path = WomenInScience;
+			sourceTree = "<group>";
+		};
+		867EA7C92B8B869B009BC530 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				865DA5392B878B06004FEA7C /* AppDelegate.swift */,
 				865DA53B2B878B06004FEA7C /* SceneDelegate.swift */,
 				865DA5422B878B07004FEA7C /* Assets.xcassets */,
 				865DA5442B878B07004FEA7C /* LaunchScreen.storyboard */,
-				865DA5472B878B07004FEA7C /* Info.plist */,
 			);
-			path = WomenInScience;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		86AB67092B88EAE8007FC763 /* Screens */ = {
