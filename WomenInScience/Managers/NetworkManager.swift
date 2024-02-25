@@ -13,36 +13,36 @@ class NetworkManager {
     
     private init() {}
     
-    func getWomenInScience(completed: @escaping ([Woman]?, String?) -> Void) {
+    func getWomenInScience(completed: @escaping (Result<[Woman], ErrorMessage>) -> Void) {
         let endpoint = baseURL + "BilimKadinlariApi.json"
         
         guard let url = URL(string: endpoint) else {
-            completed(nil, "Invalid request. Please try again.")
+            completed(.failure(.invalidRequest))
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let _ = error {
-                completed(nil, "Unable to complete your request. Please check your internet connection")
+                completed(.failure(.unableTocomplete))
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(nil, "Invalid response from the server. Please try again.")
+                completed(.failure(.invalidResponse))
                 return
             }
             
             guard let data = data else {
-                completed(nil, "The data received from the server was invalid. Please try again.")
+                completed(.failure(.invalidData))
                 return
             }
             
             do {
                 let decoder = JSONDecoder()
                 let womenInScience = try decoder.decode([Woman].self, from: data)
-                completed(womenInScience,nil)
+                completed(.success(womenInScience))
             } catch {
-                completed(nil, "The data received from the server was invalid. Please try again.")
+                completed(.failure(.invalidData))
             }
         }
         
