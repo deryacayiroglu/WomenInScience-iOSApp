@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Woman: Codable {
+struct Woman: Codable, Hashable {
     var Adi: String
     var Alani: String
     var DogumTarihi: String
