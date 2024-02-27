@@ -34,7 +34,7 @@ class ListVC: UIViewController {
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createTwoColumnFlowlayout())
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(WomanCell.self, forCellWithReuseIdentifier: WomanCell.reuseID)
     }
     
