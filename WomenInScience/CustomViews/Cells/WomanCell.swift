@@ -20,8 +20,17 @@ class WomanCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(woman: Woman) {
+        logoImageview.downloadImage(from: woman.LogoUrl)
+    }
+    
     private func configure() {
         addSubview(logoImageview)
+        
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowRadius = 2
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.25
         
         let padding: CGFloat = 8
         

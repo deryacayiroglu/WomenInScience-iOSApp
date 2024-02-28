@@ -59,6 +59,7 @@ class ListVC: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Woman>(collectionView: collectionView, cellProvider: {
             (collectionView, indexPath, woman) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WomanCell.reuseID, for: indexPath) as! WomanCell
+            cell.set(woman: woman)
             return cell
         })
     }
