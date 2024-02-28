@@ -28,7 +28,9 @@ class ListVC: UIViewController {
     
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        navigationController?.isNavigationBarHidden = true
+        //navigationController?.isNavigationBarHidden = true
+        navigationItem.hidesBackButton = true
+        title = "Women In Science"
     }
     
     func configureCollectionView() {
