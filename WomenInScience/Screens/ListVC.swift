@@ -32,14 +32,15 @@ class ListVC: UIViewController {
     }
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createTwoColumnFlowlayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createTwoColumnFlowlayout(in: view))
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
         collectionView.register(WomanCell.self, forCellWithReuseIdentifier: WomanCell.reuseID)
     }
     
     func getWomenInScience() {
-        NetworkManager.shared.getWomenInScience { result in
+        NetworkManager.shared.getWomenInScience { [weak self] result in
+            guard let self = self else { return }
             
             switch result {
             case .success(let womenInScience):
@@ -72,18 +73,4 @@ class ListVC: UIViewController {
         
     }
     
-    func createTwoColumnFlowlayout() -> UICollectionViewFlowLayout {
-        let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minimumItemSpacing: CGFloat = 10
-        let availableWidth = width - (padding * 2) - (minimumItemSpacing)
-        let itemWidth = availableWidth / 2
-                
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.5)
-            
-        return flowLayout
-    }
-
 }

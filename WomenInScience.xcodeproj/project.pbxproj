@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860C32E22B8FBF6200883FE1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C32E12B8FBF6200883FE1 /* UIHelper.swift */; };
 		865DA53A2B878B06004FEA7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA5392B878B06004FEA7C /* AppDelegate.swift */; };
 		865DA53C2B878B06004FEA7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA53B2B878B06004FEA7C /* SceneDelegate.swift */; };
 		865DA53E2B878B06004FEA7C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DA53D2B878B06004FEA7C /* SplashVC.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860C32E12B8FBF6200883FE1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		865DA5362B878B06004FEA7C /* WomenInScience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WomenInScience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865DA5392B878B06004FEA7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		865DA53B2B878B06004FEA7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				867EA7CB2B8B88C1009BC530 /* ErrorMessage.swift */,
+				860C32E12B8FBF6200883FE1 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				86CD0CA92B89382500FE83F3 /* NetworkManager.swift in Sources */,
 				867EA7CC2B8B88C1009BC530 /* ErrorMessage.swift in Sources */,
 				865DA54E2B879C02004FEA7C /* ListVC.swift in Sources */,
+				860C32E22B8FBF6200883FE1 /* UIHelper.swift in Sources */,
 				865DA53E2B878B06004FEA7C /* SplashVC.swift in Sources */,
 				867EA7D02B8B978F009BC530 /* WomanCell.swift in Sources */,
 				865DA53A2B878B06004FEA7C /* AppDelegate.swift in Sources */,
