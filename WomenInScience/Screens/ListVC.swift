@@ -14,6 +14,7 @@ class ListVC: UIViewController {
     }
     
     var womenInScience: [Woman] = []
+    var filteredWomen: [Woman] = []
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Woman>!
@@ -24,6 +25,7 @@ class ListVC: UIViewController {
         configureViewController()
         getWomenInScience()
         configureDataSource()
+        configureSearchController()
     }
     
     func configureViewController() {
@@ -47,7 +49,7 @@ class ListVC: UIViewController {
             switch result {
             case .success(let womenInScience):
                 self.womenInScience = womenInScience
-                self.updateData()
+                self.updateData(on: womenInScience)
                 print(womenInScience)
                 
             case .failure(let error):
@@ -66,14 +68,37 @@ class ListVC: UIViewController {
         })
     }
     
-    func updateData() {
+    func updateData(on women: [Woman]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Woman>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(womenInScience)
+        snapshot.appendItems(women)
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
         
+    }
+    
+    func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+}
+
+extension ListVC: UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        filteredWomen = womenInScience.filter { $0.Adi.lowercased().contains(filter.lowercased()) }
+        updateData(on: filteredWomen)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        updateData(on: womenInScience)
     }
     
 }
