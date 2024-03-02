@@ -8,10 +8,13 @@
 import UIKit
 
 class DetailVC: UIViewController {
+    
+    var woman: Woman!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemBackground
+        print(woman.Adi)
     }
 
 }

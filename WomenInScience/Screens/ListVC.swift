@@ -15,6 +15,7 @@ class ListVC: UIViewController {
     
     var womenInScience: [Woman] = []
     var filteredWomen: [Woman] = []
+    var isSearching = false
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Woman>!
@@ -32,12 +33,14 @@ class ListVC: UIViewController {
         view.backgroundColor = .systemBackground
         //navigationController?.isNavigationBarHidden = true
         navigationItem.hidesBackButton = true
+        navigationItem.backButtonTitle = "Back"
         title = "Women In Science"
     }
     
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createTwoColumnFlowlayout(in: view))
         view.addSubview(collectionView)
+        collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(WomanCell.self, forCellWithReuseIdentifier: WomanCell.reuseID)
     }
@@ -89,15 +92,28 @@ class ListVC: UIViewController {
     
 }
 
+extension ListVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activeArray = isSearching ? filteredWomen : womenInScience
+        let woman = activeArray[indexPath.item]
+        
+        let destVC = DetailVC()
+        destVC.woman = woman
+        navigationController?.pushViewController(destVC, animated: true)
+    }
+}
+
 extension ListVC: UISearchResultsUpdating, UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        isSearching = true
         filteredWomen = womenInScience.filter { $0.Adi.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredWomen)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
         updateData(on: womenInScience)
     }
     
