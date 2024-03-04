@@ -13,12 +13,15 @@ class DetailVC: UIViewController {
     
     let logoImageView = LogoImageView(frame: .zero)
     let dateLabel = UILabel()
+    let infoLabel = UILabel()
+    let scrollView = UIScrollView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage()
         configureLogoImageView()
         configureDateLabel()
+        configureInfoLabel()
         print(woman.Adi)
     }
     
@@ -64,6 +67,25 @@ class DetailVC: UIViewController {
             dateLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 10),
             dateLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+        
+    func configureInfoLabel() {
+        view.addSubview(infoLabel)
+        infoLabel.text = woman.Aciklama
+        infoLabel.textColor = .secondaryLabel
+        infoLabel.textAlignment = .center
+        infoLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        infoLabel.lineBreakMode = .byWordWrapping
+        infoLabel.numberOfLines = 0
+        infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            infoLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 10),
+            infoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            infoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            infoLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20)
+        ])
+        
     }
 
 }
