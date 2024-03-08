@@ -1,0 +1,49 @@
+[{
+		"Name": "Ada Lovelace",
+		"BornDate": "(10 Aralık 1815)",
+		"DeadDate": "(27 Kasım 1852)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/AdaLovelaceLogo.jpg",
+		"Info": "Augusta Ada King, Countess of Lovelace was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation.Lovelace's notes are important in the early history of computers, especially since the seventh one contained what many consider to be the first computer program—that is, an algorithm designed to be carried out by a machine."
+	},
+
+	{
+		"Name": "Marie Curie",
+		"BornDate": "(7 Kasım 1867)",
+		"DeadDate": "(4 Temmuz 1934)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/MarieCruieLogo.jpg",
+		"Info": "Maria Salomea Skłodowska-Curie known simply as Marie Curie was a Polish and naturalised-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person to win a Nobel Prize twice, and the only person to win a Nobel Prize in two scientific fields. Her husband, Pierre Curie, was a co-winner of her first Nobel Prize, making them the first-ever married couple to win the Nobel Prize and launching the Curie family legacy of five Nobel Prizes. She was, in 1906, the first woman to become a professor at the University of Paris"
+	},
+
+	{
+		"Name": "Mary Anning",
+		"BornDate": "(21 Mayıs 1799)",
+		"DeadDate": "(9 Mart 1847)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/MaryAnningLogo.jpg",
+		"Info": "Mary Anning was an English fossil collector, dealer, and palaeontologist who became known around the world for the discoveries she made in Jurassic marine fossil beds in the cliffs along the English Channel at Lyme Regis in the county of Dorset in Southwest England. Anning's findings contributed to changes in scientific thinking about prehistoric life and the history of the Earth. "
+	},
+
+	{
+		"Name": "Annie Jump Cannon",
+		"BornDate": "(11 Aralık 1863)",
+		"DeadDate": "(13 Nisan 1941)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/AnnieJumpCannonLogo.jpg",
+		"Info": "Annie Jump Cannon was an American astronomer whose cataloging work was instrumental in the development of contemporary stellar classification.With Edward C. Pickering, she is credited with the creation of the Harvard Classification Scheme, which was the first serious attempt to organize and classify stars based on their temperatures and spectral types. She was nearly deaf throughout her career after 1893, as a result of scarlet fever. She was a suffragist and a member of the National Women's Party."
+	},
+
+	{
+		"Name": "Rosalind Franklin",
+		"BornDate": "(25 Temmuz 1920)",
+		"DeadDate": "(16 Nisan 1958)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/RosalindFranklinLogo.jpg",
+		"Info": "Rosalind Elsie Franklin was a British chemist and X-ray crystallographer whose work was central to the understanding of the molecular structures of DNA (deoxyribonucleic acid), RNA (ribonucleic acid), viruses, coal, and graphite. Although her works on coal and viruses were appreciated in her lifetime, Franklin's contributions to the discovery of the structure of DNA were largely unrecognized during her life, for which Franklin has been variously referred to as the 'wronged heroine', the 'dark lady of DNA', the 'forgotten heroine', a 'feminist icon', and the 'Sylvia Plath of molecular biology'."
+	},
+
+	{
+		"Name": "Grace Hopper",
+		"BornDate": "(9 Aralık 1906)",
+		"DeadDate": "(1 Ocak 1992)",
+		"LogoUrl": "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/GraceHopperLogo.jpg",
+		"Info": "Grace Brewster Hopper was an American computer scientist, mathematician, and United States Navy rear admiral. One of the first programmers of the Harvard Mark I computer, she was a pioneer of computer programming. Hopper was the first to devise the theory of machine-independent programming languages, and the FLOW-MATIC programming language she created using this theory was later extended by others to create COBOL, an early high-level programming language still in use today."
+	}
+
+]
