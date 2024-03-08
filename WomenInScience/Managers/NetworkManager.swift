@@ -9,12 +9,12 @@ import Foundation
 
 class NetworkManager {
     static let shared = NetworkManager()
-    let baseURL = "https://raw.githubusercontent.com/deryacayiroglu/h5190004deryacayiroglu/main/"
+    let baseURL = "https://raw.githubusercontent.com/deryacayiroglu/WomenInScience-iOSApp/main/Docs/"
     
     private init() {}
     
     func getWomenInScience(completed: @escaping (Result<[Woman], ErrorMessage>) -> Void) {
-        let endpoint = baseURL + "BilimKadinlariApi.json"
+        let endpoint = baseURL + "WomenInScienceApi.json"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidRequest))
