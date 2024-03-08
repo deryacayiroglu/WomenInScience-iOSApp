@@ -108,7 +108,7 @@ extension ListVC: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
         isSearching = true
-        filteredWomen = womenInScience.filter { $0.Adi.lowercased().contains(filter.lowercased()) }
+        filteredWomen = womenInScience.filter { $0.Name.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredWomen)
     }
     

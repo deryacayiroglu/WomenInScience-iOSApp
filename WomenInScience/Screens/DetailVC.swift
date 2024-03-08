@@ -24,7 +24,7 @@ class DetailVC: UIViewController {
         configureLogoImageView()
         configureDateLabel()
         configureInfoLabel()
-        print(woman.Adi)
+        print(woman.Name)
     }
     
     func setBackgroundImage() {
@@ -84,7 +84,7 @@ class DetailVC: UIViewController {
     
     func configureDateLabel() {
         contentView.addSubview(dateLabel)
-        dateLabel.text = "\(woman.DogumTarihi) - \(woman.OlumTarihi)"
+        dateLabel.text = "\(woman.BornDate) - \(woman.DeadDate)"
         dateLabel.textColor = .black
         dateLabel.textAlignment = .center
         dateLabel.font = UIFont.preferredFont(forTextStyle: .body)
@@ -99,7 +99,7 @@ class DetailVC: UIViewController {
         
     func configureInfoLabel() {
         contentView.addSubview(infoLabel)
-        infoLabel.text = woman.Aciklama
+        infoLabel.text = woman.Info
         infoLabel.textColor = .secondaryLabel
         infoLabel.textAlignment = .left
         infoLabel.font = UIFont.preferredFont(forTextStyle: .body)

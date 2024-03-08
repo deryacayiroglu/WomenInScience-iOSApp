@@ -8,11 +8,9 @@
 import Foundation
 
 struct Woman: Codable, Hashable {
-    var Adi: String
-    var Alani: String
-    var DogumTarihi: String
-    var OlumTarihi: String
-    var KapakFotoUrl: String
+    var Name: String
+    var BornDate: String
+    var DeadDate: String
     var LogoUrl: String
-    var Aciklama: String
+    var Info: String
 }
